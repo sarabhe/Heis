@@ -2,58 +2,53 @@
 \label{queue_8h}\index{source/queue.\+h@{source/queue.\+h}}
 
 
-Functions to take care of the elevator queue.  
+Takes care of the elevator\textquotesingle{}s queue.  
 
 
-{\ttfamily \#include \char`\"{}elevator.\+h\char`\"{}}\newline
-Include dependency graph for queue.\+h\+:
-\nopagebreak
+{\ttfamily \#include \char`\"{}states.\+h\char`\"{}}\newline
+Include dependency graph for queue.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{queue_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{queue_8h__dep__incl}
+\includegraphics[width=324pt]{queue_8h__dep__incl}
 \end{center}
 \end{figure}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{queue_8h_a236ea41418c66779dc0ce6ac2709e9af}{queue\+\_\+clear\+\_\+all} (elevator $\ast$el)
-\begin{DoxyCompactList}\small\item\em Clear all orders (0). Unavaliable orders are given the value -\/1. \end{DoxyCompactList}\item 
-void \hyperlink{queue_8h_ab71868b345d53175364434fd5c0dc0bf}{queue\+\_\+update} (elevator $\ast$el)
+void \hyperlink{queue_8h_ab71868b345d53175364434fd5c0dc0bf}{queue\+\_\+update} (\hyperlink{structelevator}{elevator} $\ast$el)
 \begin{DoxyCompactList}\small\item\em Updates the queue with new orders. \end{DoxyCompactList}\item 
-void \hyperlink{queue_8h_a9790c01f8f7731447328bd65b393dc4e}{queue\+\_\+set\+\_\+light} (elevator $\ast$el)
-\begin{DoxyCompactList}\small\item\em Sets the order-\/lights of the buttons that have been pulled. \end{DoxyCompactList}\item 
-void \hyperlink{queue_8h_a023bd49134ae52c1e2c1252d731c4fb0}{queue\+\_\+print} (elevator $\ast$el)
-\begin{DoxyCompactList}\small\item\em Prints the queue as a matrix. \end{DoxyCompactList}\item 
-int \hyperlink{queue_8h_a2b04fb0831b618d272657b6bd783f723}{queue\+\_\+orders\+\_\+above} (elevator $\ast$el)
-\begin{DoxyCompactList}\small\item\em Checks if the queue contains any orders above its current floor. \end{DoxyCompactList}\item 
-int \hyperlink{queue_8h_afc97a824f1fae7d8a5aca0d74c261b79}{queue\+\_\+orders\+\_\+below} (elevator $\ast$el)
-\begin{DoxyCompactList}\small\item\em Checks if the queue contains any orders below its current floor. \end{DoxyCompactList}\item 
-int \hyperlink{queue_8h_a5f57d47d6d4c79d5f79d86d2e637b6a7}{queue\+\_\+orders\+\_\+at\+\_\+floor} (elevator $\ast$el)
+void \hyperlink{queue_8h_a236ea41418c66779dc0ce6ac2709e9af}{queue\+\_\+clear\+\_\+all} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Clears all orders (0). Unavaliable orders are given the value -\/1. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8h_a5f57d47d6d4c79d5f79d86d2e637b6a7}{queue\+\_\+orders\+\_\+at\+\_\+floor} (\hyperlink{structelevator}{elevator} $\ast$el)
 \begin{DoxyCompactList}\small\item\em Checks if the queue contains any orders at its current floor. \end{DoxyCompactList}\item 
-void \hyperlink{queue_8h_abc88f9451cea49981f06706b45780b55}{queue\+\_\+clear\+\_\+executed\+\_\+order} (elevator $\ast$el)
+int \hyperlink{queue_8h_a2b04fb0831b618d272657b6bd783f723}{queue\+\_\+orders\+\_\+above} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Checks if the queue contains any orders above its current floor. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8h_afc97a824f1fae7d8a5aca0d74c261b79}{queue\+\_\+orders\+\_\+below} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Checks if the queue contains any orders below its current floor. \end{DoxyCompactList}\item 
+int \hyperlink{queue_8h_afc4f556ab3ec5b6a722d14f951234f8f}{queue\+\_\+take\+\_\+order} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Checks if the elevator should take the order at current floor. \end{DoxyCompactList}\item 
+void \hyperlink{queue_8h_abc88f9451cea49981f06706b45780b55}{queue\+\_\+clear\+\_\+executed\+\_\+order} (\hyperlink{structelevator}{elevator} $\ast$el)
 \begin{DoxyCompactList}\small\item\em Deletes executed orders at current floor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{queue_8h_afc4f556ab3ec5b6a722d14f951234f8f}\label{queue_8h_afc4f556ab3ec5b6a722d14f951234f8f}} 
-int {\bfseries queue\+\_\+take\+\_\+order} (elevator $\ast$el)
-\item 
-\mbox{\Hypertarget{queue_8h_a67c922a64bce6216dddc3ccca0e1eb43}\label{queue_8h_a67c922a64bce6216dddc3ccca0e1eb43}} 
-void {\bfseries queue\+\_\+clear\+\_\+light} (elevator $\ast$el)
-\item 
-\mbox{\Hypertarget{queue_8h_ae3498650822c7f05e23cf2c62f6cc212}\label{queue_8h_ae3498650822c7f05e23cf2c62f6cc212}} 
-void {\bfseries queue\+\_\+clear\+\_\+all\+\_\+lights} (elevator $\ast$el)
-\end{DoxyCompactItemize}
+void \hyperlink{queue_8h_a9790c01f8f7731447328bd65b393dc4e}{queue\+\_\+set\+\_\+light} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Sets the order lights of the buttons that have been pulled. \end{DoxyCompactList}\item 
+void \hyperlink{queue_8h_a67c922a64bce6216dddc3ccca0e1eb43}{queue\+\_\+clear\+\_\+light} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Clears the order lights for executed orders. \end{DoxyCompactList}\item 
+void \hyperlink{queue_8h_ae3498650822c7f05e23cf2c62f6cc212}{queue\+\_\+clear\+\_\+all\+\_\+lights} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Clears all order lights. \end{DoxyCompactList}\item 
+void \hyperlink{queue_8h_a023bd49134ae52c1e2c1252d731c4fb0}{queue\+\_\+print} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Prints the queue as a matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Functions to take care of the elevator queue. 
+Takes care of the elevator\textquotesingle{}s queue. 
 
 
 
@@ -62,11 +57,11 @@ Functions to take care of the elevator queue.
 \index{queue.\+h@{queue.\+h}!queue\+\_\+clear\+\_\+all@{queue\+\_\+clear\+\_\+all}}
 \index{queue\+\_\+clear\+\_\+all@{queue\+\_\+clear\+\_\+all}!queue.\+h@{queue.\+h}}
 \subsubsection{\texorpdfstring{queue\+\_\+clear\+\_\+all()}{queue\_clear\_all()}}
-{\footnotesize\ttfamily void queue\+\_\+clear\+\_\+all (\begin{DoxyParamCaption}\item[{elevator $\ast$}]{el }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void queue\+\_\+clear\+\_\+all (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
 
 
 
-Clear all orders (0). Unavaliable orders are given the value -\/1. 
+Clears all orders (0). Unavaliable orders are given the value -\/1. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -75,13 +70,32 @@ Clear all orders (0). Unavaliable orders are given the value -\/1.
 \end{DoxyParams}
 
 
-Definition at line 3 of file queue.\+c.
+Definition at line 16 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_ae3498650822c7f05e23cf2c62f6cc212}\label{queue_8h_ae3498650822c7f05e23cf2c62f6cc212}} 
+\index{queue.\+h@{queue.\+h}!queue\+\_\+clear\+\_\+all\+\_\+lights@{queue\+\_\+clear\+\_\+all\+\_\+lights}}
+\index{queue\+\_\+clear\+\_\+all\+\_\+lights@{queue\+\_\+clear\+\_\+all\+\_\+lights}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{queue\+\_\+clear\+\_\+all\+\_\+lights()}{queue\_clear\_all\_lights()}}
+{\footnotesize\ttfamily void queue\+\_\+clear\+\_\+all\+\_\+lights (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Clears all order lights. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 113 of file queue.\+c.
 
 \mbox{\Hypertarget{queue_8h_abc88f9451cea49981f06706b45780b55}\label{queue_8h_abc88f9451cea49981f06706b45780b55}} 
 \index{queue.\+h@{queue.\+h}!queue\+\_\+clear\+\_\+executed\+\_\+order@{queue\+\_\+clear\+\_\+executed\+\_\+order}}
 \index{queue\+\_\+clear\+\_\+executed\+\_\+order@{queue\+\_\+clear\+\_\+executed\+\_\+order}!queue.\+h@{queue.\+h}}
 \subsubsection{\texorpdfstring{queue\+\_\+clear\+\_\+executed\+\_\+order()}{queue\_clear\_executed\_order()}}
-{\footnotesize\ttfamily void queue\+\_\+clear\+\_\+executed\+\_\+order (\begin{DoxyParamCaption}\item[{elevator $\ast$}]{el }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void queue\+\_\+clear\+\_\+executed\+\_\+order (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
 
 
 
@@ -94,13 +108,32 @@ Deletes executed orders at current floor.
 \end{DoxyParams}
 
 
-Definition at line 91 of file queue.\+c.
+Definition at line 83 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_a67c922a64bce6216dddc3ccca0e1eb43}\label{queue_8h_a67c922a64bce6216dddc3ccca0e1eb43}} 
+\index{queue.\+h@{queue.\+h}!queue\+\_\+clear\+\_\+light@{queue\+\_\+clear\+\_\+light}}
+\index{queue\+\_\+clear\+\_\+light@{queue\+\_\+clear\+\_\+light}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{queue\+\_\+clear\+\_\+light()}{queue\_clear\_light()}}
+{\footnotesize\ttfamily void queue\+\_\+clear\+\_\+light (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Clears the order lights for executed orders. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file queue.\+c.
 
 \mbox{\Hypertarget{queue_8h_a2b04fb0831b618d272657b6bd783f723}\label{queue_8h_a2b04fb0831b618d272657b6bd783f723}} 
 \index{queue.\+h@{queue.\+h}!queue\+\_\+orders\+\_\+above@{queue\+\_\+orders\+\_\+above}}
 \index{queue\+\_\+orders\+\_\+above@{queue\+\_\+orders\+\_\+above}!queue.\+h@{queue.\+h}}
 \subsubsection{\texorpdfstring{queue\+\_\+orders\+\_\+above()}{queue\_orders\_above()}}
-{\footnotesize\ttfamily int queue\+\_\+orders\+\_\+above (\begin{DoxyParamCaption}\item[{elevator $\ast$}]{el }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int queue\+\_\+orders\+\_\+above (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
 
 
 
@@ -111,15 +144,18 @@ Checks if the queue contains any orders above its current floor.
 \mbox{\tt in}  & {\em el} & The elevator. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for success, 0 for failure. 
+\end{DoxyReturn}
 
 
-Definition at line 60 of file queue.\+c.
+Definition at line 36 of file queue.\+c.
 
 \mbox{\Hypertarget{queue_8h_a5f57d47d6d4c79d5f79d86d2e637b6a7}\label{queue_8h_a5f57d47d6d4c79d5f79d86d2e637b6a7}} 
 \index{queue.\+h@{queue.\+h}!queue\+\_\+orders\+\_\+at\+\_\+floor@{queue\+\_\+orders\+\_\+at\+\_\+floor}}
 \index{queue\+\_\+orders\+\_\+at\+\_\+floor@{queue\+\_\+orders\+\_\+at\+\_\+floor}!queue.\+h@{queue.\+h}}
 \subsubsection{\texorpdfstring{queue\+\_\+orders\+\_\+at\+\_\+floor()}{queue\_orders\_at\_floor()}}
-{\footnotesize\ttfamily int queue\+\_\+orders\+\_\+at\+\_\+floor (\begin{DoxyParamCaption}\item[{elevator $\ast$}]{el }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int queue\+\_\+orders\+\_\+at\+\_\+floor (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
 
 
 
@@ -130,15 +166,18 @@ Checks if the queue contains any orders at its current floor.
 \mbox{\tt in}  & {\em el} & The elevator. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for success, 0 for failure. 
+\end{DoxyReturn}
 
 
-Definition at line 82 of file queue.\+c.
+Definition at line 27 of file queue.\+c.
 
 \mbox{\Hypertarget{queue_8h_afc97a824f1fae7d8a5aca0d74c261b79}\label{queue_8h_afc97a824f1fae7d8a5aca0d74c261b79}} 
 \index{queue.\+h@{queue.\+h}!queue\+\_\+orders\+\_\+below@{queue\+\_\+orders\+\_\+below}}
 \index{queue\+\_\+orders\+\_\+below@{queue\+\_\+orders\+\_\+below}!queue.\+h@{queue.\+h}}
 \subsubsection{\texorpdfstring{queue\+\_\+orders\+\_\+below()}{queue\_orders\_below()}}
-{\footnotesize\ttfamily int queue\+\_\+orders\+\_\+below (\begin{DoxyParamCaption}\item[{elevator $\ast$}]{el }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int queue\+\_\+orders\+\_\+below (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
 
 
 
@@ -149,15 +188,18 @@ Checks if the queue contains any orders below its current floor.
 \mbox{\tt in}  & {\em el} & The elevator. \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for success, 0 for failure. 
+\end{DoxyReturn}
 
 
-Definition at line 71 of file queue.\+c.
+Definition at line 47 of file queue.\+c.
 
 \mbox{\Hypertarget{queue_8h_a023bd49134ae52c1e2c1252d731c4fb0}\label{queue_8h_a023bd49134ae52c1e2c1252d731c4fb0}} 
 \index{queue.\+h@{queue.\+h}!queue\+\_\+print@{queue\+\_\+print}}
 \index{queue\+\_\+print@{queue\+\_\+print}!queue.\+h@{queue.\+h}}
 \subsubsection{\texorpdfstring{queue\+\_\+print()}{queue\_print()}}
-{\footnotesize\ttfamily void queue\+\_\+print (\begin{DoxyParamCaption}\item[{elevator $\ast$}]{el }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void queue\+\_\+print (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
 
 
 
@@ -170,17 +212,17 @@ Prints the queue as a matrix.
 \end{DoxyParams}
 
 
-Definition at line 48 of file queue.\+c.
+Definition at line 128 of file queue.\+c.
 
 \mbox{\Hypertarget{queue_8h_a9790c01f8f7731447328bd65b393dc4e}\label{queue_8h_a9790c01f8f7731447328bd65b393dc4e}} 
 \index{queue.\+h@{queue.\+h}!queue\+\_\+set\+\_\+light@{queue\+\_\+set\+\_\+light}}
 \index{queue\+\_\+set\+\_\+light@{queue\+\_\+set\+\_\+light}!queue.\+h@{queue.\+h}}
 \subsubsection{\texorpdfstring{queue\+\_\+set\+\_\+light()}{queue\_set\_light()}}
-{\footnotesize\ttfamily void queue\+\_\+set\+\_\+light (\begin{DoxyParamCaption}\item[{elevator $\ast$}]{el }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void queue\+\_\+set\+\_\+light (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
 
 
 
-Sets the order-\/lights of the buttons that have been pulled. 
+Sets the order lights of the buttons that have been pulled. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -189,13 +231,35 @@ Sets the order-\/lights of the buttons that have been pulled.
 \end{DoxyParams}
 
 
-Definition at line 27 of file queue.\+c.
+Definition at line 93 of file queue.\+c.
+
+\mbox{\Hypertarget{queue_8h_afc4f556ab3ec5b6a722d14f951234f8f}\label{queue_8h_afc4f556ab3ec5b6a722d14f951234f8f}} 
+\index{queue.\+h@{queue.\+h}!queue\+\_\+take\+\_\+order@{queue\+\_\+take\+\_\+order}}
+\index{queue\+\_\+take\+\_\+order@{queue\+\_\+take\+\_\+order}!queue.\+h@{queue.\+h}}
+\subsubsection{\texorpdfstring{queue\+\_\+take\+\_\+order()}{queue\_take\_order()}}
+{\footnotesize\ttfamily int queue\+\_\+take\+\_\+order (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Checks if the elevator should take the order at current floor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for success, 0 for failure. 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file queue.\+c.
 
 \mbox{\Hypertarget{queue_8h_ab71868b345d53175364434fd5c0dc0bf}\label{queue_8h_ab71868b345d53175364434fd5c0dc0bf}} 
 \index{queue.\+h@{queue.\+h}!queue\+\_\+update@{queue\+\_\+update}}
 \index{queue\+\_\+update@{queue\+\_\+update}!queue.\+h@{queue.\+h}}
 \subsubsection{\texorpdfstring{queue\+\_\+update()}{queue\_update()}}
-{\footnotesize\ttfamily void queue\+\_\+update (\begin{DoxyParamCaption}\item[{elevator $\ast$}]{el }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void queue\+\_\+update (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
 
 
 
@@ -208,5 +272,5 @@ Updates the queue with new orders.
 \end{DoxyParams}
 
 
-Definition at line 14 of file queue.\+c.
+Definition at line 3 of file queue.\+c.
 

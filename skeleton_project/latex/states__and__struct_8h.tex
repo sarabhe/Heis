@@ -1,0 +1,57 @@
+\hypertarget{states__and__struct_8h}{}\section{source/states\+\_\+and\+\_\+struct.h File Reference}
+\label{states__and__struct_8h}\index{source/states\+\_\+and\+\_\+struct.\+h@{source/states\+\_\+and\+\_\+struct.\+h}}
+
+
+States and struct.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hardware.\+h\char`\"{}}\newline
+Include dependency graph for states\+\_\+and\+\_\+struct.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{states__and__struct_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{states__and__struct_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structelevator}{elevator}
+\begin{DoxyCompactList}\small\item\em A structure to represent the elevator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{states__and__struct_8h_a5283e184f4663a2fd4c40e49f67bb794}\label{states__and__struct_8h_a5283e184f4663a2fd4c40e49f67bb794}} 
+typedef enum \hyperlink{states__and__struct_8h_a09fd0473240586cf26c56b9c75589073}{elev\+\_\+state} \hyperlink{states__and__struct_8h_a5283e184f4663a2fd4c40e49f67bb794}{elev\+\_\+state}
+\begin{DoxyCompactList}\small\item\em The elevator\textquotesingle{}s different states. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{states__and__struct_8h_af6825629c9d12ceba0fcb13e3785378c}\label{states__and__struct_8h_af6825629c9d12ceba0fcb13e3785378c}} 
+typedef struct \hyperlink{structelevator}{elevator} \hyperlink{states__and__struct_8h_af6825629c9d12ceba0fcb13e3785378c}{elevator}
+\begin{DoxyCompactList}\small\item\em A structure to represent the elevator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{states__and__struct_8h_a09fd0473240586cf26c56b9c75589073}\label{states__and__struct_8h_a09fd0473240586cf26c56b9c75589073}} 
+enum \hyperlink{states__and__struct_8h_a09fd0473240586cf26c56b9c75589073}{elev\+\_\+state} \{ {\bfseries I\+D\+LE}, 
+{\bfseries M\+O\+VE}, 
+{\bfseries D\+O\+O\+R\+\_\+\+O\+P\+EN}, 
+{\bfseries E\+M\+E\+R\+G\+E\+N\+C\+Y\+\_\+\+S\+T\+OP}
+ \}\begin{DoxyCompactList}\small\item\em The elevator\textquotesingle{}s different states. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+States and struct. 
+

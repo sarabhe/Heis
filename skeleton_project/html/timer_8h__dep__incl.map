@@ -1,6 +1,6 @@
 <map id="source/timer.h" name="source/timer.h">
-<area shape="rect" id="node2" href="$fsm_8h_source.html" title="source/fsm.h" alt="" coords="44,80,143,107"/>
-<area shape="rect" id="node4" href="$main_8c_source.html" title="source/main.c" alt="" coords="128,155,232,181"/>
-<area shape="rect" id="node5" href="$timer_8c_source.html" title="source/timer.c" alt="" coords="218,80,323,107"/>
+<area shape="rect" id="node2" href="$fsm_8h.html" title="The finite state machine. " alt="" coords="68,80,167,107"/>
+<area shape="rect" id="node5" href="$timer_8c_source.html" title="source/timer.c" alt="" coords="191,80,297,107"/>
 <area shape="rect" id="node3" href="$fsm_8c_source.html" title="source/fsm.c" alt="" coords="5,155,104,181"/>
+<area shape="rect" id="node4" href="$main_8c_source.html" title="source/main.c" alt="" coords="128,155,232,181"/>
 </map>

@@ -1,0 +1,7 @@
+<map id="source/fsm.h" name="source/fsm.h">
+<area shape="rect" id="node2" href="$timer_8h.html" title="Functions to keep the door open for a period of time. " alt="" coords="71,155,134,181"/>
+<area shape="rect" id="node9" href="$elevator_8h.html" title="Provides communication between the elevator and the hardware. " alt="" coords="189,80,267,107"/>
+<area shape="rect" id="node5" href="$states_8h.html" title="Creates a struct for the elevator and an enumerator for its different states. " alt="" coords="157,229,227,256"/>
+<area shape="rect" id="node8" href="$hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="353,304,439,331"/>
+<area shape="rect" id="node10" href="$queue_8h.html" title="Takes care of the elevator&#39;s queue. " alt="" coords="158,155,226,181"/>
+</map>

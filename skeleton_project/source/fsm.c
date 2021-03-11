@@ -1,7 +1,26 @@
 #include "fsm.h"
 
-//En tilstandsswitch som endrer heisens tilstand
-int fsm_switch(elevator* el){
+void fsm_init(elevator* el){
+    int error = hardware_init();
+    if(error != 0){
+        fprintf(stderr, "Unable to initialize hardware\n");
+        exit(1);
+    }
+
+    while(elev_get_current_floor() == -1){
+        hardware_command_movement(HARDWARE_MOVEMENT_DOWN);
+    }
+    hardware_command_movement(HARDWARE_MOVEMENT_STOP);
+
+    queue_clear_all_lights(el);
+    el->current_dir = HARDWARE_MOVEMENT_STOP; 
+    el->currentfloor = elev_get_current_floor();
+    queue_clear_all(el);
+    el->state = IDLE;
+}
+
+
+void fsm_switch(elevator* el){
 
     while(1){
 
@@ -9,7 +28,7 @@ int fsm_switch(elevator* el){
             el->state = EMERGENCY_STOP;
         }
 
-        elev_set_floor_indicator(el); //oppdaterer etasjelys
+        elev_set_floor_indicator(el); 
         queue_update(el);
         queue_set_light(el);
 
@@ -47,9 +66,9 @@ void fsm_move(elevator* el){
     elev_control_range(el);
     elev_update_dir(el);
     hardware_command_movement(el->current_dir);
-    elev_set_current_floor(el); //Må oppdateres hyppigere for en spesifikk kombinasjon
+    elev_set_current_floor(el); 
 
-    if(elev_get_current_floor(el)!=-1 && el->previousfloor!=el->currentfloor){ //ingen av disse betingelsene oppfylles. 
+    if(elev_get_current_floor(el)!=-1 && el->previousfloor!=el->currentfloor){ 
         if(queue_take_order(el)){
             el->state = IDLE;
         }
@@ -65,7 +84,11 @@ void fsm_door_open(elevator* el){
     {
         queue_update(el);
         queue_set_light(el);
-
+        
+        if(hardware_read_stop_signal()){
+            el->state = EMERGENCY_STOP;
+            break;
+        }
         if(hardware_read_obstruction_signal()){
             return;
         }

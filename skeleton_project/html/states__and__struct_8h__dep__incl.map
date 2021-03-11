@@ -1,0 +1,11 @@
+<map id="source/states_and_struct.h" name="source/states_and_struct.h">
+<area shape="rect" id="node2" href="$queue_8h.html" title="Functions to take care of the elevator queue. " alt="" coords="245,80,355,107"/>
+<area shape="rect" id="node3" href="$elevator_8h.html" title="Functions used on the elevator. " alt="" coords="140,155,263,181"/>
+<area shape="rect" id="node6" href="$fsm_8h.html" title="The finit state machine. " alt="" coords="251,304,349,331"/>
+<area shape="rect" id="node10" href="$queue_8c_source.html" title="source/queue.c" alt="" coords="338,155,449,181"/>
+<area shape="rect" id="node4" href="$elevator_8c_source.html" title="source/elevator.c" alt="" coords="5,229,128,256"/>
+<area shape="rect" id="node5" href="$timer_8h.html" title="Functions to keep the door open for a period of time. " alt="" coords="153,229,258,256"/>
+<area shape="rect" id="node9" href="$timer_8c_source.html" title="source/timer.c" alt="" coords="121,304,226,331"/>
+<area shape="rect" id="node7" href="$fsm_8c_source.html" title="source/fsm.c" alt="" coords="188,379,287,405"/>
+<area shape="rect" id="node8" href="$main_8c_source.html" title="source/main.c" alt="" coords="311,379,415,405"/>
+</map>

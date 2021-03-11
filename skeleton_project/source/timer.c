@@ -1,7 +1,5 @@
 #include "timer.h"
 
-
-
 void start_timer(elevator* el){
     el->start_time = time(NULL);
 }
@@ -14,17 +12,6 @@ int times_up(elevator* el){
     }
     else{
         return 0;
-    }
-    
-
-    
-    
-
-    /*while (counter < DOOR_TIME);
-    
-    return(1); */
-    
+    }  
 }   
 
-
-//while (!timer()){door open light on}

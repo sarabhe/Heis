@@ -1,5 +1,4 @@
 <map id="source/timer.h" name="source/timer.h">
-<area shape="rect" id="node4" href="$elevator_8h.html" title="Elevator. " alt="" coords="229,80,307,107"/>
-<area shape="rect" id="node7" href="$hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="174,155,261,181"/>
-<area shape="rect" id="node8" href="$queue_8h.html" title="Functions to take care of the elevator queue. " alt="" coords="285,155,353,181"/>
+<area shape="rect" id="node4" href="$states_8h.html" title="Creates a struct for the elevator and an enumerator for its different states. " alt="" coords="163,80,232,107"/>
+<area shape="rect" id="node7" href="$hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="353,155,439,181"/>
 </map>

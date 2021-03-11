@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['timer_2eh',['timer.h',['../timer_8h.html',1,'']]],
-  ['times_5fup',['times_up',['../timer_8h.html#af9fbb2e2157733d3cfb53784091a2d8e',1,'timer.c']]]
+  ['start_5ftimer',['start_timer',['../timer_8h.html#aea3dcf2d3ef6743d9cb41914c5a5d72f',1,'timer.c']]],
+  ['states_2eh',['states.h',['../states_8h.html',1,'']]]
 ];

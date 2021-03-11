@@ -5,8 +5,7 @@
 Driver for the elevator hardware.  
 
 
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -83,6 +82,10 @@ Commands the hardware to open-\/ or close the elevator door.
 {\em door\+\_\+open} & A truthy value (non-\/zero) to open the door; 0 to close. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 139 of file hardware\+\_\+sal.\+c.
+
 \mbox{\Hypertarget{hardware_8h_a407a6ec035ba357de6aa0fbe55501d1e}\label{hardware_8h_a407a6ec035ba357de6aa0fbe55501d1e}} 
 \index{hardware.\+h@{hardware.\+h}!hardware\+\_\+command\+\_\+floor\+\_\+indicator\+\_\+on@{hardware\+\_\+command\+\_\+floor\+\_\+indicator\+\_\+on}}
 \index{hardware\+\_\+command\+\_\+floor\+\_\+indicator\+\_\+on@{hardware\+\_\+command\+\_\+floor\+\_\+indicator\+\_\+on}!hardware.\+h@{hardware.\+h}}
@@ -101,6 +104,10 @@ Commands the hardware to turn on the floor indicator for {\ttfamily floor}. All 
 \begin{DoxyWarning}{Warning}
 Owing to peculiarities in the hardware construction, there will always be one indicator active. 
 \end{DoxyWarning}
+
+
+Definition at line 148 of file hardware\+\_\+sal.\+c.
+
 \mbox{\Hypertarget{hardware_8h_a01de081ef0510a111053c18cd31afa27}\label{hardware_8h_a01de081ef0510a111053c18cd31afa27}} 
 \index{hardware.\+h@{hardware.\+h}!hardware\+\_\+command\+\_\+movement@{hardware\+\_\+command\+\_\+movement}}
 \index{hardware\+\_\+command\+\_\+movement@{hardware\+\_\+command\+\_\+movement}!hardware.\+h@{hardware.\+h}}
@@ -116,6 +123,10 @@ Commands the elevator to either move up or down, or commands it to halt.
 {\em movement} & Commanded movement. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 70 of file hardware\+\_\+sal.\+c.
+
 \mbox{\Hypertarget{hardware_8h_aa9b33faa52f0ec5b614d3e7dc05be140}\label{hardware_8h_aa9b33faa52f0ec5b614d3e7dc05be140}} 
 \index{hardware.\+h@{hardware.\+h}!hardware\+\_\+command\+\_\+order\+\_\+light@{hardware\+\_\+command\+\_\+order\+\_\+light}}
 \index{hardware\+\_\+command\+\_\+order\+\_\+light@{hardware\+\_\+command\+\_\+order\+\_\+light}!hardware.\+h@{hardware.\+h}}
@@ -135,6 +146,10 @@ Sets the light in a button corresponding to an order of type {\ttfamily order\+\
 {\em on} & A truthy value (non-\/zero) to turn the light on; 0 to turn it off. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 173 of file hardware\+\_\+sal.\+c.
+
 \mbox{\Hypertarget{hardware_8h_aa75b3ac17f72b25946414f48d0063a10}\label{hardware_8h_aa75b3ac17f72b25946414f48d0063a10}} 
 \index{hardware.\+h@{hardware.\+h}!hardware\+\_\+command\+\_\+stop\+\_\+light@{hardware\+\_\+command\+\_\+stop\+\_\+light}}
 \index{hardware\+\_\+command\+\_\+stop\+\_\+light@{hardware\+\_\+command\+\_\+stop\+\_\+light}!hardware.\+h@{hardware.\+h}}
@@ -150,6 +165,10 @@ Sets the light in the panel stop button.
 {\em on} & A truthy value (non-\/zero) to turn the light on; 0 to turn it off. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 164 of file hardware\+\_\+sal.\+c.
+
 \mbox{\Hypertarget{hardware_8h_a054b8fb8768311d46be58d6a4890d771}\label{hardware_8h_a054b8fb8768311d46be58d6a4890d771}} 
 \index{hardware.\+h@{hardware.\+h}!hardware\+\_\+init@{hardware\+\_\+init}}
 \index{hardware\+\_\+init@{hardware\+\_\+init}!hardware.\+h@{hardware.\+h}}
@@ -163,6 +182,10 @@ Initializes the elevator control hardware. Must be called once before other call
 \begin{DoxyReturn}{Returns}
 0 on success. Non-\/zero for failure. 
 \end{DoxyReturn}
+
+
+Definition at line 46 of file hardware\+\_\+sal.\+c.
+
 \mbox{\Hypertarget{hardware_8h_ab048489e6302bb5604aad753f2d7d501}\label{hardware_8h_ab048489e6302bb5604aad753f2d7d501}} 
 \index{hardware.\+h@{hardware.\+h}!hardware\+\_\+read\+\_\+floor\+\_\+sensor@{hardware\+\_\+read\+\_\+floor\+\_\+sensor}}
 \index{hardware\+\_\+read\+\_\+floor\+\_\+sensor@{hardware\+\_\+read\+\_\+floor\+\_\+sensor}!hardware.\+h@{hardware.\+h}}
@@ -181,6 +204,10 @@ Polls the floor sensor for the given {\ttfamily floor}.
 \begin{DoxyReturn}{Returns}
 1 if the elevator is at {\ttfamily floor}, otherwise 0; 
 \end{DoxyReturn}
+
+
+Definition at line 96 of file hardware\+\_\+sal.\+c.
+
 \mbox{\Hypertarget{hardware_8h_a459fe57a3ee4bc2a28e8a15b2ab14c2d}\label{hardware_8h_a459fe57a3ee4bc2a28e8a15b2ab14c2d}} 
 \index{hardware.\+h@{hardware.\+h}!hardware\+\_\+read\+\_\+obstruction\+\_\+signal@{hardware\+\_\+read\+\_\+obstruction\+\_\+signal}}
 \index{hardware\+\_\+read\+\_\+obstruction\+\_\+signal@{hardware\+\_\+read\+\_\+obstruction\+\_\+signal}!hardware.\+h@{hardware.\+h}}
@@ -194,6 +221,10 @@ Polls the hardware for the current obstruction signal.
 \begin{DoxyReturn}{Returns}
 1 if the obstruction signal is high; 0 if it is low. 
 \end{DoxyReturn}
+
+
+Definition at line 92 of file hardware\+\_\+sal.\+c.
+
 \mbox{\Hypertarget{hardware_8h_a87917f3aa093fb46ca821a400d011ee8}\label{hardware_8h_a87917f3aa093fb46ca821a400d011ee8}} 
 \index{hardware.\+h@{hardware.\+h}!hardware\+\_\+read\+\_\+order@{hardware\+\_\+read\+\_\+order}}
 \index{hardware\+\_\+read\+\_\+order@{hardware\+\_\+read\+\_\+order}!hardware.\+h@{hardware.\+h}}
@@ -214,6 +245,10 @@ Polls the hardware for the status of orders from floor {\ttfamily floor} of type
 \begin{DoxyReturn}{Returns}
 1 if the combination of {\ttfamily floor} and {\ttfamily order\+\_\+type} is being requested, otherwise 0. 
 \end{DoxyReturn}
+
+
+Definition at line 122 of file hardware\+\_\+sal.\+c.
+
 \mbox{\Hypertarget{hardware_8h_a4a77b27c86675c00b513db3445966804}\label{hardware_8h_a4a77b27c86675c00b513db3445966804}} 
 \index{hardware.\+h@{hardware.\+h}!hardware\+\_\+read\+\_\+stop\+\_\+signal@{hardware\+\_\+read\+\_\+stop\+\_\+signal}}
 \index{hardware\+\_\+read\+\_\+stop\+\_\+signal@{hardware\+\_\+read\+\_\+stop\+\_\+signal}!hardware.\+h@{hardware.\+h}}
@@ -227,3 +262,7 @@ Polls the hardware for the current stop signal.
 \begin{DoxyReturn}{Returns}
 1 if the stop signal is high; 0 if it is low. 
 \end{DoxyReturn}
+
+
+Definition at line 88 of file hardware\+\_\+sal.\+c.
+

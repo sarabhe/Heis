@@ -1,0 +1,160 @@
+\hypertarget{fsm_8h}{}\section{source/fsm.h File Reference}
+\label{fsm_8h}\index{source/fsm.\+h@{source/fsm.\+h}}
+
+
+The finite state machine.  
+
+
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}elevator.\+h\char`\"{}}\newline
+Include dependency graph for fsm.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fsm_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{fsm_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{fsm_8h_a544184483e70276bdd08ea9387c759dc}{fsm\+\_\+init} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Initializes the elevator and moves it to a defined state. \end{DoxyCompactList}\item 
+void \hyperlink{fsm_8h_a55b8638db8400e3a58de8a714900b88e}{fsm\+\_\+switch} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Loop that controls the elevator. Contains the logic for the finite state machine. \end{DoxyCompactList}\item 
+void \hyperlink{fsm_8h_aac27fb6111ea92a93c516024ba4f96ef}{fsm\+\_\+idle} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Function called when the elevator is in state I\+D\+LE. If there is a request at current floor, enters state {\ttfamily D\+O\+O\+R\+\_\+\+O\+P\+EN}. Otherwise if there is a request above or below, enters state {\ttfamily M\+O\+VE}. \end{DoxyCompactList}\item 
+void \hyperlink{fsm_8h_a5d1c77afef3d5331db952c4812d22a1f}{fsm\+\_\+move} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Function called when the elevator is in state M\+O\+VE. Sets direction and starts the motor. If the elevator should take order at current floor, enters state {\ttfamily I\+D\+LE}. \end{DoxyCompactList}\item 
+void \hyperlink{fsm_8h_a9967fc494ad00be3ebde2163464c016f}{fsm\+\_\+door\+\_\+open} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Function called when the elevator is in state D\+O\+OR O\+P\+EN. Commands door open, starts the timer and checks for any obstructions. Closes the door when the time is up and clears excecuted orders. Then enters state {\ttfamily I\+D\+LE}. \end{DoxyCompactList}\item 
+void \hyperlink{fsm_8h_a69c1174f8092050b76f11aa072901ce3}{fsm\+\_\+emergency\+\_\+stop} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Function called when the elevator is in state E\+M\+E\+R\+G\+E\+N\+CY S\+T\+OP. Stops the elevator and sets the stop light. Clears the queue. If the elevator is at a floor the door is opened and when the stop button is released the elevator enters state {\ttfamily D\+O\+O\+R\+\_\+\+O\+P\+EN}. Otherwise it awaits until any requests is made, and then enters {\ttfamily M\+O\+VE}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The finite state machine. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{fsm_8h_a9967fc494ad00be3ebde2163464c016f}\label{fsm_8h_a9967fc494ad00be3ebde2163464c016f}} 
+\index{fsm.\+h@{fsm.\+h}!fsm\+\_\+door\+\_\+open@{fsm\+\_\+door\+\_\+open}}
+\index{fsm\+\_\+door\+\_\+open@{fsm\+\_\+door\+\_\+open}!fsm.\+h@{fsm.\+h}}
+\subsubsection{\texorpdfstring{fsm\+\_\+door\+\_\+open()}{fsm\_door\_open()}}
+{\footnotesize\ttfamily void fsm\+\_\+door\+\_\+open (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Function called when the elevator is in state D\+O\+OR O\+P\+EN. Commands door open, starts the timer and checks for any obstructions. Closes the door when the time is up and clears excecuted orders. Then enters state {\ttfamily I\+D\+LE}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file fsm.\+c.
+
+\mbox{\Hypertarget{fsm_8h_a69c1174f8092050b76f11aa072901ce3}\label{fsm_8h_a69c1174f8092050b76f11aa072901ce3}} 
+\index{fsm.\+h@{fsm.\+h}!fsm\+\_\+emergency\+\_\+stop@{fsm\+\_\+emergency\+\_\+stop}}
+\index{fsm\+\_\+emergency\+\_\+stop@{fsm\+\_\+emergency\+\_\+stop}!fsm.\+h@{fsm.\+h}}
+\subsubsection{\texorpdfstring{fsm\+\_\+emergency\+\_\+stop()}{fsm\_emergency\_stop()}}
+{\footnotesize\ttfamily void fsm\+\_\+emergency\+\_\+stop (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Function called when the elevator is in state E\+M\+E\+R\+G\+E\+N\+CY S\+T\+OP. Stops the elevator and sets the stop light. Clears the queue. If the elevator is at a floor the door is opened and when the stop button is released the elevator enters state {\ttfamily D\+O\+O\+R\+\_\+\+O\+P\+EN}. Otherwise it awaits until any requests is made, and then enters {\ttfamily M\+O\+VE}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 109 of file fsm.\+c.
+
+\mbox{\Hypertarget{fsm_8h_aac27fb6111ea92a93c516024ba4f96ef}\label{fsm_8h_aac27fb6111ea92a93c516024ba4f96ef}} 
+\index{fsm.\+h@{fsm.\+h}!fsm\+\_\+idle@{fsm\+\_\+idle}}
+\index{fsm\+\_\+idle@{fsm\+\_\+idle}!fsm.\+h@{fsm.\+h}}
+\subsubsection{\texorpdfstring{fsm\+\_\+idle()}{fsm\_idle()}}
+{\footnotesize\ttfamily void fsm\+\_\+idle (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Function called when the elevator is in state I\+D\+LE. If there is a request at current floor, enters state {\ttfamily D\+O\+O\+R\+\_\+\+O\+P\+EN}. Otherwise if there is a request above or below, enters state {\ttfamily M\+O\+VE}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file fsm.\+c.
+
+\mbox{\Hypertarget{fsm_8h_a544184483e70276bdd08ea9387c759dc}\label{fsm_8h_a544184483e70276bdd08ea9387c759dc}} 
+\index{fsm.\+h@{fsm.\+h}!fsm\+\_\+init@{fsm\+\_\+init}}
+\index{fsm\+\_\+init@{fsm\+\_\+init}!fsm.\+h@{fsm.\+h}}
+\subsubsection{\texorpdfstring{fsm\+\_\+init()}{fsm\_init()}}
+{\footnotesize\ttfamily void fsm\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Initializes the elevator and moves it to a defined state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file fsm.\+c.
+
+\mbox{\Hypertarget{fsm_8h_a5d1c77afef3d5331db952c4812d22a1f}\label{fsm_8h_a5d1c77afef3d5331db952c4812d22a1f}} 
+\index{fsm.\+h@{fsm.\+h}!fsm\+\_\+move@{fsm\+\_\+move}}
+\index{fsm\+\_\+move@{fsm\+\_\+move}!fsm.\+h@{fsm.\+h}}
+\subsubsection{\texorpdfstring{fsm\+\_\+move()}{fsm\_move()}}
+{\footnotesize\ttfamily void fsm\+\_\+move (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Function called when the elevator is in state M\+O\+VE. Sets direction and starts the motor. If the elevator should take order at current floor, enters state {\ttfamily I\+D\+LE}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file fsm.\+c.
+
+\mbox{\Hypertarget{fsm_8h_a55b8638db8400e3a58de8a714900b88e}\label{fsm_8h_a55b8638db8400e3a58de8a714900b88e}} 
+\index{fsm.\+h@{fsm.\+h}!fsm\+\_\+switch@{fsm\+\_\+switch}}
+\index{fsm\+\_\+switch@{fsm\+\_\+switch}!fsm.\+h@{fsm.\+h}}
+\subsubsection{\texorpdfstring{fsm\+\_\+switch()}{fsm\_switch()}}
+{\footnotesize\ttfamily void fsm\+\_\+switch (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Loop that controls the elevator. Contains the logic for the finite state machine. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file fsm.\+c.
+

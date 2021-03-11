@@ -1,10 +1,8 @@
 <map id="source/queue.h" name="source/queue.h">
-<area shape="rect" id="node2" href="$elevator_8h.html" title="Elevator. " alt="" coords="157,80,280,107"/>
-<area shape="rect" id="node5" href="$fsm_8h_source.html" title="source/fsm.h" alt="" coords="5,229,104,256"/>
-<area shape="rect" id="node9" href="$queue_8c_source.html" title="source/queue.c" alt="" coords="305,80,415,107"/>
-<area shape="rect" id="node3" href="$elevator_8c_source.html" title="source/elevator.c" alt="" coords="223,155,345,181"/>
-<area shape="rect" id="node4" href="$timer_8h.html" title="Functions to keep the door open for a period of time. " alt="" coords="93,155,198,181"/>
-<area shape="rect" id="node7" href="$main_8c_source.html" title="source/main.c" alt="" coords="220,304,324,331"/>
-<area shape="rect" id="node8" href="$timer_8c_source.html" title="source/timer.c" alt="" coords="129,229,234,256"/>
-<area shape="rect" id="node6" href="$fsm_8c_source.html" title="source/fsm.c" alt="" coords="5,304,104,331"/>
+<area shape="rect" id="node2" href="$elevator_8h.html" title="Provides communication between the elevator and the hardware. " alt="" coords="72,80,195,107"/>
+<area shape="rect" id="node7" href="$queue_8c_source.html" title="source/queue.c" alt="" coords="219,80,330,107"/>
+<area shape="rect" id="node3" href="$elevator_8c_source.html" title="source/elevator.c" alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node4" href="$fsm_8h.html" title="The finite state machine. " alt="" coords="152,155,251,181"/>
+<area shape="rect" id="node5" href="$fsm_8c_source.html" title="source/fsm.c" alt="" coords="89,229,188,256"/>
+<area shape="rect" id="node6" href="$main_8c_source.html" title="source/main.c" alt="" coords="212,229,316,256"/>
 </map>

@@ -69,16 +69,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Functions to take care of the elevator queue.  
+<p>Takes care of the elevator's queue.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="elevator_8h_source.html">elevator.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="states_8h_source.html">states.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for queue.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="queue_8h__incl.png" border="0" usemap="#source_2queue_8h" alt=""/></div>
 <map name="source_2queue_8h" id="source_2queue_8h">
-<area shape="rect" id="node2" href="elevator_8h.html" title="Elevator. " alt="" coords="173,80,251,107"/>
-<area shape="rect" id="node6" href="hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="270,155,357,181"/>
+<area shape="rect" id="node2" href="states_8h.html" title="Creates a struct for the elevator and an enumerator for its different states. " alt="" coords="177,80,247,107"/>
+<area shape="rect" id="node7" href="hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="353,155,439,181"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -86,14 +86,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="queue_8h__dep__incl.png" border="0" usemap="#source_2queue_8hdep" alt=""/></div>
 <map name="source_2queue_8hdep" id="source_2queue_8hdep">
-<area shape="rect" id="node2" href="elevator_8h.html" title="Elevator. " alt="" coords="157,80,280,107"/>
-<area shape="rect" id="node5" href="fsm_8h_source.html" title="source/fsm.h" alt="" coords="5,229,104,256"/>
-<area shape="rect" id="node9" href="queue_8c_source.html" title="source/queue.c" alt="" coords="305,80,415,107"/>
-<area shape="rect" id="node3" href="elevator_8c_source.html" title="source/elevator.c" alt="" coords="223,155,345,181"/>
-<area shape="rect" id="node4" href="timer_8h.html" title="Functions to keep the door open for a period of time. " alt="" coords="93,155,198,181"/>
-<area shape="rect" id="node7" href="main_8c_source.html" title="source/main.c" alt="" coords="220,304,324,331"/>
-<area shape="rect" id="node8" href="timer_8c_source.html" title="source/timer.c" alt="" coords="129,229,234,256"/>
-<area shape="rect" id="node6" href="fsm_8c_source.html" title="source/fsm.c" alt="" coords="5,304,104,331"/>
+<area shape="rect" id="node2" href="elevator_8h.html" title="Provides communication between the elevator and the hardware. " alt="" coords="72,80,195,107"/>
+<area shape="rect" id="node7" href="queue_8c_source.html" title="source/queue.c" alt="" coords="219,80,330,107"/>
+<area shape="rect" id="node3" href="elevator_8c_source.html" title="source/elevator.c" alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node4" href="fsm_8h.html" title="The finite state machine. " alt="" coords="152,155,251,181"/>
+<area shape="rect" id="node5" href="fsm_8c_source.html" title="source/fsm.c" alt="" coords="89,229,188,256"/>
+<area shape="rect" id="node6" href="main_8c_source.html" title="source/main.c" alt="" coords="212,229,316,256"/>
 </map>
 </div>
 </div>
@@ -101,42 +99,42 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a236ea41418c66779dc0ce6ac2709e9af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a236ea41418c66779dc0ce6ac2709e9af">queue_clear_all</a> (elevator *el)</td></tr>
-<tr class="memdesc:a236ea41418c66779dc0ce6ac2709e9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all orders (0). Unavaliable orders are given the value -1.  <a href="#a236ea41418c66779dc0ce6ac2709e9af">More...</a><br /></td></tr>
-<tr class="separator:a236ea41418c66779dc0ce6ac2709e9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab71868b345d53175364434fd5c0dc0bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#ab71868b345d53175364434fd5c0dc0bf">queue_update</a> (elevator *el)</td></tr>
+<tr class="memitem:ab71868b345d53175364434fd5c0dc0bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#ab71868b345d53175364434fd5c0dc0bf">queue_update</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
 <tr class="memdesc:ab71868b345d53175364434fd5c0dc0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the queue with new orders.  <a href="#ab71868b345d53175364434fd5c0dc0bf">More...</a><br /></td></tr>
 <tr class="separator:ab71868b345d53175364434fd5c0dc0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9790c01f8f7731447328bd65b393dc4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a9790c01f8f7731447328bd65b393dc4e">queue_set_light</a> (elevator *el)</td></tr>
-<tr class="memdesc:a9790c01f8f7731447328bd65b393dc4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the order-lights of the buttons that have been pulled.  <a href="#a9790c01f8f7731447328bd65b393dc4e">More...</a><br /></td></tr>
-<tr class="separator:a9790c01f8f7731447328bd65b393dc4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a023bd49134ae52c1e2c1252d731c4fb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a023bd49134ae52c1e2c1252d731c4fb0">queue_print</a> (elevator *el)</td></tr>
-<tr class="memdesc:a023bd49134ae52c1e2c1252d731c4fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the queue as a matrix.  <a href="#a023bd49134ae52c1e2c1252d731c4fb0">More...</a><br /></td></tr>
-<tr class="separator:a023bd49134ae52c1e2c1252d731c4fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b04fb0831b618d272657b6bd783f723"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a2b04fb0831b618d272657b6bd783f723">queue_orders_above</a> (elevator *el)</td></tr>
-<tr class="memdesc:a2b04fb0831b618d272657b6bd783f723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the queue contains any orders above its current floor.  <a href="#a2b04fb0831b618d272657b6bd783f723">More...</a><br /></td></tr>
-<tr class="separator:a2b04fb0831b618d272657b6bd783f723"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc97a824f1fae7d8a5aca0d74c261b79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#afc97a824f1fae7d8a5aca0d74c261b79">queue_orders_below</a> (elevator *el)</td></tr>
-<tr class="memdesc:afc97a824f1fae7d8a5aca0d74c261b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the queue contains any orders below its current floor.  <a href="#afc97a824f1fae7d8a5aca0d74c261b79">More...</a><br /></td></tr>
-<tr class="separator:afc97a824f1fae7d8a5aca0d74c261b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f57d47d6d4c79d5f79d86d2e637b6a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a5f57d47d6d4c79d5f79d86d2e637b6a7">queue_orders_at_floor</a> (elevator *el)</td></tr>
+<tr class="memitem:a236ea41418c66779dc0ce6ac2709e9af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a236ea41418c66779dc0ce6ac2709e9af">queue_clear_all</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
+<tr class="memdesc:a236ea41418c66779dc0ce6ac2709e9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all orders (0). Unavaliable orders are given the value -1.  <a href="#a236ea41418c66779dc0ce6ac2709e9af">More...</a><br /></td></tr>
+<tr class="separator:a236ea41418c66779dc0ce6ac2709e9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f57d47d6d4c79d5f79d86d2e637b6a7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a5f57d47d6d4c79d5f79d86d2e637b6a7">queue_orders_at_floor</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
 <tr class="memdesc:a5f57d47d6d4c79d5f79d86d2e637b6a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the queue contains any orders at its current floor.  <a href="#a5f57d47d6d4c79d5f79d86d2e637b6a7">More...</a><br /></td></tr>
 <tr class="separator:a5f57d47d6d4c79d5f79d86d2e637b6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc88f9451cea49981f06706b45780b55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#abc88f9451cea49981f06706b45780b55">queue_clear_executed_order</a> (elevator *el)</td></tr>
+<tr class="memitem:a2b04fb0831b618d272657b6bd783f723"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a2b04fb0831b618d272657b6bd783f723">queue_orders_above</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
+<tr class="memdesc:a2b04fb0831b618d272657b6bd783f723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the queue contains any orders above its current floor.  <a href="#a2b04fb0831b618d272657b6bd783f723">More...</a><br /></td></tr>
+<tr class="separator:a2b04fb0831b618d272657b6bd783f723"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc97a824f1fae7d8a5aca0d74c261b79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#afc97a824f1fae7d8a5aca0d74c261b79">queue_orders_below</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
+<tr class="memdesc:afc97a824f1fae7d8a5aca0d74c261b79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the queue contains any orders below its current floor.  <a href="#afc97a824f1fae7d8a5aca0d74c261b79">More...</a><br /></td></tr>
+<tr class="separator:afc97a824f1fae7d8a5aca0d74c261b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc4f556ab3ec5b6a722d14f951234f8f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#afc4f556ab3ec5b6a722d14f951234f8f">queue_take_order</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
+<tr class="memdesc:afc4f556ab3ec5b6a722d14f951234f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the elevator should take the order at current floor.  <a href="#afc4f556ab3ec5b6a722d14f951234f8f">More...</a><br /></td></tr>
+<tr class="separator:afc4f556ab3ec5b6a722d14f951234f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc88f9451cea49981f06706b45780b55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#abc88f9451cea49981f06706b45780b55">queue_clear_executed_order</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
 <tr class="memdesc:abc88f9451cea49981f06706b45780b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes executed orders at current floor.  <a href="#abc88f9451cea49981f06706b45780b55">More...</a><br /></td></tr>
 <tr class="separator:abc88f9451cea49981f06706b45780b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc4f556ab3ec5b6a722d14f951234f8f"><td class="memItemLeft" align="right" valign="top"><a id="afc4f556ab3ec5b6a722d14f951234f8f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>queue_take_order</b> (elevator *el)</td></tr>
-<tr class="separator:afc4f556ab3ec5b6a722d14f951234f8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67c922a64bce6216dddc3ccca0e1eb43"><td class="memItemLeft" align="right" valign="top"><a id="a67c922a64bce6216dddc3ccca0e1eb43"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_light</b> (elevator *el)</td></tr>
+<tr class="memitem:a9790c01f8f7731447328bd65b393dc4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a9790c01f8f7731447328bd65b393dc4e">queue_set_light</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
+<tr class="memdesc:a9790c01f8f7731447328bd65b393dc4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the order lights of the buttons that have been pulled.  <a href="#a9790c01f8f7731447328bd65b393dc4e">More...</a><br /></td></tr>
+<tr class="separator:a9790c01f8f7731447328bd65b393dc4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c922a64bce6216dddc3ccca0e1eb43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a67c922a64bce6216dddc3ccca0e1eb43">queue_clear_light</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
+<tr class="memdesc:a67c922a64bce6216dddc3ccca0e1eb43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the order lights for executed orders.  <a href="#a67c922a64bce6216dddc3ccca0e1eb43">More...</a><br /></td></tr>
 <tr class="separator:a67c922a64bce6216dddc3ccca0e1eb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3498650822c7f05e23cf2c62f6cc212"><td class="memItemLeft" align="right" valign="top"><a id="ae3498650822c7f05e23cf2c62f6cc212"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_lights</b> (elevator *el)</td></tr>
+<tr class="memitem:ae3498650822c7f05e23cf2c62f6cc212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#ae3498650822c7f05e23cf2c62f6cc212">queue_clear_all_lights</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
+<tr class="memdesc:ae3498650822c7f05e23cf2c62f6cc212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all order lights.  <a href="#ae3498650822c7f05e23cf2c62f6cc212">More...</a><br /></td></tr>
 <tr class="separator:ae3498650822c7f05e23cf2c62f6cc212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023bd49134ae52c1e2c1252d731c4fb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a023bd49134ae52c1e2c1252d731c4fb0">queue_print</a> (<a class="el" href="structelevator.html">elevator</a> *el)</td></tr>
+<tr class="memdesc:a023bd49134ae52c1e2c1252d731c4fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the queue as a matrix.  <a href="#a023bd49134ae52c1e2c1252d731c4fb0">More...</a><br /></td></tr>
+<tr class="separator:a023bd49134ae52c1e2c1252d731c4fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Functions to take care of the elevator queue. </p>
+<div class="textblock"><p>Takes care of the elevator's queue. </p>
 
 <p class="definition">Definition in file <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -149,14 +147,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
         <tr>
           <td class="memname">void queue_clear_all </td>
           <td>(</td>
-          <td class="paramtype">elevator *&#160;</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
           <td class="paramname"><em>el</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Clear all orders (0). Unavaliable orders are given the value -1. </p>
+<p>Clears all orders (0). Unavaliable orders are given the value -1. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">el</td><td>The elevator. </td></tr>
@@ -164,7 +162,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00003">3</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00016">16</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a id="ae3498650822c7f05e23cf2c62f6cc212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3498650822c7f05e23cf2c62f6cc212">&#9670;&nbsp;</a></span>queue_clear_all_lights()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void queue_clear_all_lights </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears all order lights. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">el</td><td>The elevator. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00113">113</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 </div>
 </div>
@@ -177,7 +203,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
         <tr>
           <td class="memname">void queue_clear_executed_order </td>
           <td>(</td>
-          <td class="paramtype">elevator *&#160;</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
           <td class="paramname"><em>el</em></td><td>)</td>
           <td></td>
         </tr>
@@ -192,7 +218,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00091">91</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00083">83</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a id="a67c922a64bce6216dddc3ccca0e1eb43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c922a64bce6216dddc3ccca0e1eb43">&#9670;&nbsp;</a></span>queue_clear_light()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void queue_clear_light </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears the order lights for executed orders. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">el</td><td>The elevator. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00103">103</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 </div>
 </div>
@@ -205,7 +259,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
         <tr>
           <td class="memname">int queue_orders_above </td>
           <td>(</td>
-          <td class="paramtype">elevator *&#160;</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
           <td class="paramname"><em>el</em></td><td>)</td>
           <td></td>
         </tr>
@@ -219,8 +273,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>1 for success, 0 for failure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00060">60</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00036">36</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 </div>
 </div>
@@ -233,7 +288,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
         <tr>
           <td class="memname">int queue_orders_at_floor </td>
           <td>(</td>
-          <td class="paramtype">elevator *&#160;</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
           <td class="paramname"><em>el</em></td><td>)</td>
           <td></td>
         </tr>
@@ -247,8 +302,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>1 for success, 0 for failure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00082">82</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00027">27</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 </div>
 </div>
@@ -261,7 +317,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
         <tr>
           <td class="memname">int queue_orders_below </td>
           <td>(</td>
-          <td class="paramtype">elevator *&#160;</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
           <td class="paramname"><em>el</em></td><td>)</td>
           <td></td>
         </tr>
@@ -275,8 +331,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>1 for success, 0 for failure. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00071">71</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00047">47</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 </div>
 </div>
@@ -289,7 +346,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
         <tr>
           <td class="memname">void queue_print </td>
           <td>(</td>
-          <td class="paramtype">elevator *&#160;</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
           <td class="paramname"><em>el</em></td><td>)</td>
           <td></td>
         </tr>
@@ -304,7 +361,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00048">48</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00128">128</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 </div>
 </div>
@@ -317,14 +374,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
         <tr>
           <td class="memname">void queue_set_light </td>
           <td>(</td>
-          <td class="paramtype">elevator *&#160;</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
           <td class="paramname"><em>el</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the order-lights of the buttons that have been pulled. </p>
+<p>Sets the order lights of the buttons that have been pulled. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">el</td><td>The elevator. </td></tr>
@@ -332,7 +389,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00027">27</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00093">93</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a id="afc4f556ab3ec5b6a722d14f951234f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4f556ab3ec5b6a722d14f951234f8f">&#9670;&nbsp;</a></span>queue_take_order()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int queue_take_order </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the elevator should take the order at current floor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">el</td><td>The elevator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 for success, 0 for failure. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00058">58</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 </div>
 </div>
@@ -345,7 +431,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
         <tr>
           <td class="memname">void queue_update </td>
           <td>(</td>
-          <td class="paramtype">elevator *&#160;</td>
+          <td class="paramtype"><a class="el" href="structelevator.html">elevator</a> *&#160;</td>
           <td class="paramname"><em>el</em></td><td>)</td>
           <td></td>
         </tr>
@@ -360,7 +446,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_clear_all_light
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00014">14</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="queue_8c_source.html#l00003">3</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 </div>
 </div>

@@ -2,7 +2,7 @@
 \label{elevator_8h}\index{source/elevator.\+h@{source/elevator.\+h}}
 
 
-Elevator.  
+Provides communication between the elevator and the hardware.  
 
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
@@ -10,25 +10,155 @@ Elevator.
 {\ttfamily \#include $<$signal.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}hardware.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
-{\ttfamily \#include $<$time.\+h$>$}\newline
-Include dependency graph for elevator.\+h\+:
-\nopagebreak
+Include dependency graph for elevator.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{elevator_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{elevator_8h__dep__incl}
+\includegraphics[width=313pt]{elevator_8h__dep__incl}
 \end{center}
 \end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{elevator_8h_a6dc30b1815d08f01375368de9a48b9b0}{elev\+\_\+get\+\_\+current\+\_\+floor} ()
+\begin{DoxyCompactList}\small\item\em Gets the current floor. \end{DoxyCompactList}\item 
+void \hyperlink{elevator_8h_a6ecc6ecec304caf35ed5316556009a7f}{elev\+\_\+set\+\_\+current\+\_\+floor} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Sets the current floor when the elevator arrives at a new floor. \end{DoxyCompactList}\item 
+void \hyperlink{elevator_8h_ac0e8478b1c283ca752a60dab249a7b69}{elev\+\_\+set\+\_\+floor\+\_\+indicator} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Sets the floor indicator light for the current floor. If the elevator is between floors, the floor indicator light is lit for the previous floor. \end{DoxyCompactList}\item 
+\hyperlink{hardware_8h_a2167c399a24df296afc432bcb88228af}{Hardware\+Movement} \hyperlink{elevator_8h_a4211046ff062aaa48cf6355059ba282d}{elev\+\_\+set\+\_\+motor\+\_\+dir} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Sets the motor direction depending on previous direction and next orders. \end{DoxyCompactList}\item 
+void \hyperlink{elevator_8h_a79c037675197b1bed2ebb4f4f7d10a74}{elev\+\_\+update\+\_\+dir} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Updates previous and current direction. \end{DoxyCompactList}\item 
+void \hyperlink{elevator_8h_a01cb37f9f851a7b6d21f166d843aabb7}{elev\+\_\+control\+\_\+range} (\hyperlink{structelevator}{elevator} $\ast$el)
+\begin{DoxyCompactList}\small\item\em Secures that the elevator does not move past its range by changing the motor direction when it reaches the top/bottom floor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Elevator. 
+Provides communication between the elevator and the hardware. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{elevator_8h_a01cb37f9f851a7b6d21f166d843aabb7}\label{elevator_8h_a01cb37f9f851a7b6d21f166d843aabb7}} 
+\index{elevator.\+h@{elevator.\+h}!elev\+\_\+control\+\_\+range@{elev\+\_\+control\+\_\+range}}
+\index{elev\+\_\+control\+\_\+range@{elev\+\_\+control\+\_\+range}!elevator.\+h@{elevator.\+h}}
+\subsubsection{\texorpdfstring{elev\+\_\+control\+\_\+range()}{elev\_control\_range()}}
+{\footnotesize\ttfamily void elev\+\_\+control\+\_\+range (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Secures that the elevator does not move past its range by changing the motor direction when it reaches the top/bottom floor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file elevator.\+c.
+
+\mbox{\Hypertarget{elevator_8h_a6dc30b1815d08f01375368de9a48b9b0}\label{elevator_8h_a6dc30b1815d08f01375368de9a48b9b0}} 
+\index{elevator.\+h@{elevator.\+h}!elev\+\_\+get\+\_\+current\+\_\+floor@{elev\+\_\+get\+\_\+current\+\_\+floor}}
+\index{elev\+\_\+get\+\_\+current\+\_\+floor@{elev\+\_\+get\+\_\+current\+\_\+floor}!elevator.\+h@{elevator.\+h}}
+\subsubsection{\texorpdfstring{elev\+\_\+get\+\_\+current\+\_\+floor()}{elev\_get\_current\_floor()}}
+{\footnotesize\ttfamily int elev\+\_\+get\+\_\+current\+\_\+floor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current floor. 
+
+\begin{DoxyReturn}{Returns}
+-\/1 if the elevator is between floors, otherwise the floor\textquotesingle{}s index. 
+\end{DoxyReturn}
+
+
+Definition at line 3 of file elevator.\+c.
+
+\mbox{\Hypertarget{elevator_8h_a6ecc6ecec304caf35ed5316556009a7f}\label{elevator_8h_a6ecc6ecec304caf35ed5316556009a7f}} 
+\index{elevator.\+h@{elevator.\+h}!elev\+\_\+set\+\_\+current\+\_\+floor@{elev\+\_\+set\+\_\+current\+\_\+floor}}
+\index{elev\+\_\+set\+\_\+current\+\_\+floor@{elev\+\_\+set\+\_\+current\+\_\+floor}!elevator.\+h@{elevator.\+h}}
+\subsubsection{\texorpdfstring{elev\+\_\+set\+\_\+current\+\_\+floor()}{elev\_set\_current\_floor()}}
+{\footnotesize\ttfamily void elev\+\_\+set\+\_\+current\+\_\+floor (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Sets the current floor when the elevator arrives at a new floor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file elevator.\+c.
+
+\mbox{\Hypertarget{elevator_8h_ac0e8478b1c283ca752a60dab249a7b69}\label{elevator_8h_ac0e8478b1c283ca752a60dab249a7b69}} 
+\index{elevator.\+h@{elevator.\+h}!elev\+\_\+set\+\_\+floor\+\_\+indicator@{elev\+\_\+set\+\_\+floor\+\_\+indicator}}
+\index{elev\+\_\+set\+\_\+floor\+\_\+indicator@{elev\+\_\+set\+\_\+floor\+\_\+indicator}!elevator.\+h@{elevator.\+h}}
+\subsubsection{\texorpdfstring{elev\+\_\+set\+\_\+floor\+\_\+indicator()}{elev\_set\_floor\_indicator()}}
+{\footnotesize\ttfamily void elev\+\_\+set\+\_\+floor\+\_\+indicator (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Sets the floor indicator light for the current floor. If the elevator is between floors, the floor indicator light is lit for the previous floor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file elevator.\+c.
+
+\mbox{\Hypertarget{elevator_8h_a4211046ff062aaa48cf6355059ba282d}\label{elevator_8h_a4211046ff062aaa48cf6355059ba282d}} 
+\index{elevator.\+h@{elevator.\+h}!elev\+\_\+set\+\_\+motor\+\_\+dir@{elev\+\_\+set\+\_\+motor\+\_\+dir}}
+\index{elev\+\_\+set\+\_\+motor\+\_\+dir@{elev\+\_\+set\+\_\+motor\+\_\+dir}!elevator.\+h@{elevator.\+h}}
+\subsubsection{\texorpdfstring{elev\+\_\+set\+\_\+motor\+\_\+dir()}{elev\_set\_motor\_dir()}}
+{\footnotesize\ttfamily \hyperlink{hardware_8h_a2167c399a24df296afc432bcb88228af}{Hardware\+Movement} elev\+\_\+set\+\_\+motor\+\_\+dir (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Sets the motor direction depending on previous direction and next orders. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+UP}, {\ttfamily H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+S\+T\+OP}, {\ttfamily H\+A\+R\+D\+W\+A\+R\+E\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T\+\_\+\+D\+O\+WN} 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file elevator.\+c.
+
+\mbox{\Hypertarget{elevator_8h_a79c037675197b1bed2ebb4f4f7d10a74}\label{elevator_8h_a79c037675197b1bed2ebb4f4f7d10a74}} 
+\index{elevator.\+h@{elevator.\+h}!elev\+\_\+update\+\_\+dir@{elev\+\_\+update\+\_\+dir}}
+\index{elev\+\_\+update\+\_\+dir@{elev\+\_\+update\+\_\+dir}!elevator.\+h@{elevator.\+h}}
+\subsubsection{\texorpdfstring{elev\+\_\+update\+\_\+dir()}{elev\_update\_dir()}}
+{\footnotesize\ttfamily void elev\+\_\+update\+\_\+dir (\begin{DoxyParamCaption}\item[{\hyperlink{structelevator}{elevator} $\ast$}]{el }\end{DoxyParamCaption})}
+
+
+
+Updates previous and current direction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em el} & The elevator. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file elevator.\+c.
 

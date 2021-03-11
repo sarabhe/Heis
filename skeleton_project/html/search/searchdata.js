@@ -1,24 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "ehqst",
-  1: "ehqt",
-  2: "hqst",
-  3: "h"
+  0: "efhqst",
+  1: "e",
+  2: "efhqst",
+  3: "efhqst",
+  4: "e",
+  5: "eh"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "enums"
+  1: "classes",
+  2: "files",
+  3: "functions",
+  4: "typedefs",
+  5: "enums"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Files",
-  2: "Functions",
-  3: "Enumerations"
+  1: "Data Structures",
+  2: "Files",
+  3: "Functions",
+  4: "Typedefs",
+  5: "Enumerations"
 };
 

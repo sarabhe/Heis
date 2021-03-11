@@ -1,4 +1,4 @@
 <map id="source/queue.h" name="source/queue.h">
-<area shape="rect" id="node2" href="$elevator_8h.html" title="Elevator. " alt="" coords="173,80,251,107"/>
-<area shape="rect" id="node6" href="$hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="270,155,357,181"/>
+<area shape="rect" id="node2" href="$states_8h.html" title="Creates a struct for the elevator and an enumerator for its different states. " alt="" coords="177,80,247,107"/>
+<area shape="rect" id="node7" href="$hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="353,155,439,181"/>
 </map>

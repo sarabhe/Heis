@@ -1,4 +1,5 @@
 <map id="source/elevator.h" name="source/elevator.h">
-<area shape="rect" id="node5" href="$hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="270,80,357,107"/>
-<area shape="rect" id="node6" href="$queue_8h.html" title="Functions to take care of the elevator queue. " alt="" coords="381,80,449,107"/>
+<area shape="rect" id="node5" href="$hardware_8h.html" title="Driver for the elevator hardware. " alt="" coords="353,229,439,256"/>
+<area shape="rect" id="node6" href="$queue_8h.html" title="Takes care of the elevator&#39;s queue. " alt="" coords="174,80,242,107"/>
+<area shape="rect" id="node7" href="$states_8h.html" title="Creates a struct for the elevator and an enumerator for its different states. " alt="" coords="173,155,243,181"/>
 </map>
