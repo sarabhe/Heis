@@ -79,7 +79,7 @@ void fsm_move(elevator* el){
 void fsm_door_open(elevator* el){
     hardware_command_door_open(1);
 
-    start_timer(el);
+    timer_start(el);
     while (1)
     {
         queue_update(el);
@@ -87,12 +87,12 @@ void fsm_door_open(elevator* el){
         
         if(hardware_read_stop_signal()){
             el->state = EMERGENCY_STOP;
-            break;
+            return;
         }
         if(hardware_read_obstruction_signal()){
             return;
         }
-        if(times_up(el)){
+        if(timer_check_times_up(el)){
             break;
         }
 
